@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a3a2a"/>
+      <stop offset="100%" stop-color="#0d1f15"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="url(#bg)"/>
+  <circle cx="100" cy="78" r="38" fill="#e8f5e9"/>
+  <ellipse cx="100" cy="155" rx="55" ry="40" fill="#e8f5e9"/>
+  <text x="100" y="92" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#1a3a2a">АМ</text>
+</svg>

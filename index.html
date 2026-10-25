@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Артём Молоков — резюме начинающего веб-разработчика</title>
+  <meta name="description" content="Резюме студента: образование, навыки, проекты и увлечения.">
+  <style>
+    :root {
+      --ink: #1a2e1a;
+      --paper: #f4f7f5;
+      --accent: #00c853;
+      --soft: #e0f2e9;
+      --mark: #69f0ae;
+      --line: #c8dcd0;
+      --card-bg: #ffffff;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--accent); text-decoration-thickness: 1.5px; }
+    a:hover, a:focus { background: var(--mark); color: var(--ink); outline: none; }
+    .wrap { max-width: 62rem; margin: 0 auto; padding: 0 1rem; }
+
+    /* Шапка */
+    .top { background: var(--ink); color: var(--paper); padding: 1.5rem 0; }
+    .top .wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid var(--mark);
+      object-fit: cover;
+      background: #0d1f15;
+    }
+    .top h1 { margin: 0; font-size: 1.75rem; line-height: 1.2; }
+    .top p { margin: 0.25rem 0 0; opacity: 0.9; }
+    .top nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem 1.25rem;
+    }
+    .top nav a { color: var(--paper); }
+    .top nav a:hover, .top nav a:focus { color: var(--ink); }
+
+    /* Разделы */
+    main { padding: 1rem 0 2rem; }
+    main > .wrap > section,
+    main > .wrap > aside { margin-top: 2rem; }
+    h2 {
+      margin: 0 0 1rem;
+      padding-left: 0.75rem;
+      border-left: 6px solid var(--accent);
+      font-size: 1.5rem;
+    }
+    h3 { margin: 1.5rem 0 0.5rem; font-size: 1.25rem; }
+    h4 { margin: 1rem 0 0.25rem; font-size: 1.05rem; color: var(--accent); }
+    mark { background: var(--mark); padding: 0 0.2em; border-radius: 2px; }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0.75rem 1.25rem 1.25rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 1rem;
+    }
+    .cards h3 { margin-top: 0.5rem; }
+
+    figure { margin: 1rem 0; }
+    figcaption { font-size: 0.9rem; color: #4d6070; margin-top: 0.35rem; }
+    blockquote {
+      margin: 0;
+      padding: 0.75rem 1rem;
+      border-left: 4px solid var(--accent);
+      background: var(--soft);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .table-scroll { overflow-x: auto; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 22rem;
+      background: #fff;
+    }
+    caption { text-align: left; font-weight: 600; padding: 0.5rem 0; }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+    }
+    thead th { background: var(--soft); }
+
+    details {
+      margin-top: 0.75rem;
+      padding: 0.5rem 0.75rem;
+      border: 1px dashed var(--accent);
+      border-radius: 6px;
+    }
+    summary { cursor: pointer; font-weight: 600; }
+
+    footer {
+      background: var(--soft);
+      border-top: 4px solid var(--accent);
+      padding: 1rem 0 1.5rem;
+    }
+    footer h2 { margin-top: 0.5rem; }
+    address { font-style: normal; }
+
+    @media (min-width: 48rem) {
+      .top .wrap {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .top h1 { font-size: 2.25rem; }
+      .avatar { width: 150px; height: 150px; }
+      .two-col {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+      }
+      .two-col > * { flex: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="wrap">
+      <img class="avatar" src="img/avatar.svg" alt="Аватар Артёма Молокова" width="150" height="150">
+      <div>
+        <h1>Артём Молоков</h1>
+        <p>Студент, начинающий веб-разработчик</p>
+      </div>
+      <nav aria-label="Разделы страницы">
+        <ul>
+          <li><a href="#about">Обо мне</a></li>
+          <li><a href="#skills">Навыки</a></li>
+          <li><a href="#projects">Проекты</a></li>
+          <li><a href="#hobby">Увлечения</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <section id="about">
+        <h2>Обо мне</h2>
+        <div class="two-col">
+          <div>
+            <p>
+              Привет! Я учусь на втором курсе и осваиваю
+              <abbr title="HyperText Markup Language">HTML</abbr>
+              и <abbr title="Cascading Style Sheets">CSS</abbr>.
+              Мне нравится превращать идеи в работающие страницы —
+              от простой вёрстки до аккуратной адаптивной вёрстки.
+            </p>
+            <p><mark>Главная цель:</mark> стать фронтенд-разработчиком и сделать первый коммерческий проект.</p>
+          </div>
+          <figure>
+            <img src="img/project.svg" alt="Схематичный макет сайта с заголовком, текстом и кнопкой" width="480" height="270">
+            <figcaption>Мой первый макет страницы</figcaption>
+          </figure>
+        </div>
+
+        <article class="card">
+          <h3>Образование</h3>
+          <section>
+            <h4>Университет</h4>
+            <p>
+              ИРНИТУ, направление «Таможенное дело».<br>
+              Период обучения:
+              <time datetime="2024-09-01">с 1 сентября 2024</time> — по настоящее время.
+            </p>
+          </section>
+          <section>
+            <h4>Дополнительное обучение</h4>
+            <ul>
+              <li>Продвижение и дизайн web-ресурсов (2026–2027)</li>
+              <li>Самостоятельное изучение HTML и CSS</li>
+            </ul>
+          </section>
+        </article>
+      </section>
+
+      <section id="skills">
+        <h2>Навыки</h2>
+
+        <h3>Технические навыки</h3>
+        <ol>
+          <li>Семантическая вёрстка на HTML5</li>
+          <li>Стилизация и адаптивность на CSS</li>
+          <li>Основы работы с Git и GitHub</li>
+        </ol>
+
+        <div class="table-scroll">
+          <table>
+            <caption>Уровень владения инструментами</caption>
+            <thead>
+              <tr>
+                <th scope="col">Инструмент</th>
+                <th scope="col">Уровень</th>
+                <th scope="col">Опыт</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">HTML</th>
+                <td>Начинающий</td>
+                <td>1 месяц</td>
+              </tr>
+              <tr>
+                <th scope="row">CSS</th>
+                <td>Начинающий</td>
+                <td>1 месяц</td>
+              </tr>
+              <tr>
+                <th scope="row">Git / GitHub</th>
+                <td>Начальный</td>
+                <td>1 месяц</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Личные качества</h3>
+        <dl>
+          <dt>Внимательность</dt>
+          <dd>Замечаю незакрытые теги раньше валидатора.</dd>
+          <dt>Любознательность</dt>
+          <dd>Разбираю, как устроены страницы любимых сайтов.</dd>
+        </dl>
+      </section>
+
+      <section id="projects">
+        <h2>Проекты</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Проект 1: страница-резюме</h3>
+            <h4>Задача</h4>
+            <p>Собрать адаптивную страницу из семантических тегов.</p>
+            <h4>Результат</h4>
+            <p>Страница проходит валидатор и корректно выглядит на телефоне.</p>
+            <details>
+              <summary>Что я узнал</summary>
+              <p>Как выстраивать иерархию заголовков и зачем нужен атрибут <code>alt</code>.</p>
+            </details>
+          </article>
+          <article class="card">
+            <h3>Проект 2: сайт про хобби</h3>
+            <h4>Задача</h4>
+            <p>Рассказать о своём увлечении с фотографиями и ссылками.</p>
+            <h4>Результат</h4>
+            <p>В планах: галерея на Flexbox и тёмная тема.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="hobby">
+        <h2>Увлечения</h2>
+        <h3>Чем занимаюсь в свободное время</h3>
+        <ul>
+          <li>Путешествия и фотография</li>
+          <li>Настольные игры</li>
+          <li>Чтение о дизайне и типографике</li>
+        </ul>
+        <h3>Любимая цитата</h3>
+        <figure>
+          <blockquote>
+            <p>«Лучший учитель — это опыт, а не чья-то искажённая точка зрения.»</p>
+          </blockquote>
+          <figcaption>— Джек Керуак</figcaption>
+        </figure>
+      </section>
+
+      <aside>
+        <h2>Полезные ссылки</h2>
+        <ul>
+          <li><a href="https://developer.mozilla.org/ru/" target="_blank" rel="noopener">MDN Web Docs на русском</a></li>
+          <li><a href="https://validator.w3.org/nu/" target="_blank" rel="noopener">Валидатор HTML</a></li>
+        </ul>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer id="contacts">
+    <div class="wrap">
+      <h2>Контакты</h2>
+      <address>
+        <p>Почта: <a href="mailto:molokov2007@mail.ru">molokov2007@mail.ru</a></p>
+        <p>GitHub: <a href="https://github.com/" target="_blank" rel="noopener">github.com/ваш-логин</a></p>
+      </address>
+      <p><small>© <time datetime="2026">2026</time> Артём Молоков</small></p>
+    </div>
+  </footer>
+
+</body>
+</html>
